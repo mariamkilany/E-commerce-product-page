@@ -7,7 +7,7 @@ function Cart() {
     return (
         <>
         <div className='cart-con' onClick={()=>setShowCart(!showCart)}>
-            <span className='total'>{total}</span>
+            {total>0?<span className='total'>{total}</span>:''}
             <img src={cartIcon} alt="cart" />
         </div>
         {showCart&&<CartMenu/>}
